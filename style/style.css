@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    background-color: rgba(170, 170, 170, .1);
 }
 .text-deep-gray {
     color: #3A3A3A;
@@ -84,12 +89,12 @@
     align-items: center;
 }
 .header .icons .first-row {
-    width: 53%;
+    width: 55%;
     display: flex;
     justify-content: space-around;
 }
 .header .icons .second-row {
-    width: 47%;
+    width: 45%;
     display: flex;
     justify-content: space-around;
 }
@@ -97,7 +102,89 @@
     width: 15%;
 }
 .header .icons .second-row img {
-    width: 20%;
+    width: 22%;
+}
+.section-1 {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section-1 .title {
+    font-family: 'poppins';
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #3A3A3A;
+    text-align: center;
+}
+.section-1 .box-container .text-container .box-title {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-family: 'poppins';
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #18191F;
+
+}
+.section-1 .box-container .text-container .subtitle {
+    font-family: 'inter';
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 2%;
+}
+.section-1 .box-container .text-container .description {
+    margin-top: 1%;
+    font-family: 'inter';
+    font-weight: bold;
+    font-size: .9rem;
+    color: #787885;
+    line-height: 143%;
+    letter-spacing: 1.8%;
+}
+.section-1 .box-container {
+    margin: 4% auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.9rem;
+    max-width: 1000px;
+    
+}
+.section-1 .box-container .box {
+    padding: .9rem;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    border-radius: 8px;
+
+}
+.section-1 .box-container .box .img-container img {
+    width: 100%;
+}
+.section-1 .box-container .text-container .rating-container .stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #FB8200;
+    font-size: .6rem;
+}
+.section-1 .box-container .text-container .rating-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.section-1 .box-container .text-container .rating-container h3 {
+    font-size: .9rem;
+    line-height: 22px;
+    letter-spacing: .1px;
+    color: #5E6366;
+    font-family: 'roboto';
+}
+.section-1 .see-more {
+    font-family: 'poppins';
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    color: rgba(224, 44, 109, 0.87);
+    position: absolute;
+    right: 0px;
 }
 
 @media screen and (max-width: 576px) {
@@ -143,15 +230,18 @@
         flex-direction: column;
     }
     .header .icons .first-row {
-        width: 85%;
-        display: flex;
-        justify-content: space-around;
+        width: 100%;
     }
     .header .icons .second-row {
-        width: 75%;
-        display: flex;
-        justify-content: space-around;
+        width: 90%;
         margin-top: 5%;
+    }
+    .section-1 {
+        width: 90%;
+    }
+    .section-1 .box-container {
+        grid-template-columns: 1fr;
+        /* justify-content: center; */
     }
 
 }
